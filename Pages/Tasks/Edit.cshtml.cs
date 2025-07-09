@@ -30,7 +30,7 @@ namespace TaskPlanner.Pages.Tasks
                 var task = await _taskService.GetTaskByIdAsync(id);
                 if (task == null)
                 {
-                    TempData["ErrorMessage"] = _localizer["TaskNotFound"];
+                    TempData["ErrorMessage"] = _localizer["TaskNotFound"].Value;
                     return RedirectToPage("/Index");
                 }
 
@@ -40,7 +40,7 @@ namespace TaskPlanner.Pages.Tasks
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error loading task with ID {TaskId}", id);
-                TempData["ErrorMessage"] = _localizer["ErrorLoadingTask"];
+                TempData["ErrorMessage"] = _localizer["ErrorLoadingTask"].Value;
                 return RedirectToPage("/Index");
             }
         }
@@ -55,13 +55,13 @@ namespace TaskPlanner.Pages.Tasks
             try
             {
                 await _taskService.UpdateTaskAsync(Task);
-                TempData["SuccessMessage"] = _localizer["TaskUpdated"];
+                TempData["SuccessMessage"] = _localizer["TaskUpdated"].Value;
                 return RedirectToPage("/Index");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error updating task with ID {TaskId}", Task.Id);
-                ModelState.AddModelError("", _localizer["ErrorUpdatingTask"]);
+                ModelState.AddModelError("", _localizer["ErrorUpdatingTask"].Value);
                 return Page();
             }
         }

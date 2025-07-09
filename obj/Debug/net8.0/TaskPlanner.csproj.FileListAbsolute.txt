@@ -39,3 +39,4 @@ C:\EPAM\NextGenLeaders\NextGen-TaskPlanner\obj\Debug\net8.0\refint\TaskPlanner.d
 C:\EPAM\NextGenLeaders\NextGen-TaskPlanner\obj\Debug\net8.0\TaskPlanner.pdb
 C:\EPAM\NextGenLeaders\NextGen-TaskPlanner\obj\Debug\net8.0\TaskPlanner.genruntimeconfig.cache
 C:\EPAM\NextGenLeaders\NextGen-TaskPlanner\obj\Debug\net8.0\ref\TaskPlanner.dll
+C:\EPAM\NextGenLeaders\NextGen-TaskPlanner\obj\Debug\net8.0\TaskPlanner.sourcelink.json

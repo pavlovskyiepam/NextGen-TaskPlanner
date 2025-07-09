@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TaskPlanner")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute(" ")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0cd132f3088247a552ac47813edd42868feec9f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("TaskPlanner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TaskPlanner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

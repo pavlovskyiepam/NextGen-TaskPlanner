@@ -52,13 +52,13 @@ namespace TaskPlanner.Pages.Tasks
                 _logger.LogInformation("Creating task...");
                 await _taskService.CreateTaskAsync(Task);
                 _logger.LogInformation("Task created successfully");
-                TempData["SuccessMessage"] = _localizer["TaskCreated"];
+                TempData["SuccessMessage"] = _localizer["TaskCreated"].Value;
                 return RedirectToPage("/Index");
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error creating task");
-                ModelState.AddModelError("", _localizer["ErrorCreatingTask"]);
+                ModelState.AddModelError("", _localizer["ErrorCreatingTask"].Value);
                 return Page();
             }
         }

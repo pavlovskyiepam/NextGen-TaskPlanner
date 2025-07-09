@@ -31,7 +31,7 @@ namespace TaskPlanner.Pages
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error loading tasks");
-                TempData["ErrorMessage"] = _localizer["ErrorLoadingTasks"];
+                TempData["ErrorMessage"] = _localizer["ErrorLoadingTasks"].Value;
             }
         }
 
@@ -42,17 +42,17 @@ namespace TaskPlanner.Pages
                 var success = await _taskService.DeleteTaskAsync(id);
                 if (success)
                 {
-                    TempData["SuccessMessage"] = _localizer["TaskDeleted"];
+                    TempData["SuccessMessage"] = _localizer["TaskDeleted"].Value;
                 }
                 else
                 {
-                    TempData["ErrorMessage"] = _localizer["TaskNotFoundOrCannotDelete"];
+                    TempData["ErrorMessage"] = _localizer["TaskNotFoundOrCannotDelete"].Value;
                 }
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error deleting task with ID {TaskId}", id);
-                TempData["ErrorMessage"] = _localizer["ErrorDeletingTask"];
+                TempData["ErrorMessage"] = _localizer["ErrorDeletingTask"].Value;
             }
 
             return RedirectToPage();
@@ -68,18 +68,18 @@ namespace TaskPlanner.Pages
                     var task = await _taskService.GetTaskByIdAsync(id);
                     if (task != null)
                     {
-                        TempData["SuccessMessage"] = task.IsCompleted ? _localizer["TaskCompleted"] : _localizer["TaskUncompleted"];
+                        TempData["SuccessMessage"] = task.IsCompleted ? _localizer["TaskCompleted"].Value : _localizer["TaskUncompleted"].Value;
                     }
                 }
                 else
                 {
-                    TempData["ErrorMessage"] = _localizer["TaskNotFoundOrCannotUpdate"];
+                    TempData["ErrorMessage"] = _localizer["TaskNotFoundOrCannotUpdate"].Value;
                 }
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error toggling task completion for ID {TaskId}", id);
-                TempData["ErrorMessage"] = _localizer["ErrorUpdatingTask"];
+                TempData["ErrorMessage"] = _localizer["ErrorUpdatingTask"].Value;
             }
 
             return RedirectToPage();
