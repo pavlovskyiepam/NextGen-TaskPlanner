@@ -89,7 +89,6 @@ TaskPlanner/
 │       ├── Edit.cshtml         # Edit task page
 │       └── Edit.cshtml.cs      # Edit page model
 ├── Resources/
-│   ├── SharedResource.cs       # Shared resource class
 │   ├── SharedResource.en.resx  # English localization
 │   └── SharedResource.uk.resx  # Ukrainian localization
 ├── wwwroot/
@@ -137,8 +136,9 @@ Tasks are stored in a JSON file located at `Data/tasks.json`. The file is automa
 
 ### Adding New Languages
 1. Create a new `.resx` file in the `Resources` folder
-2. Follow the naming convention: `SharedResource.{culture}.resx`
+2. Name it `SharedResource.{culture}.resx` (e.g., `SharedResource.fr.resx` for French)
 3. Add the culture to the supported cultures in `Program.cs`
+4. Add all required keys and translations
 
 ### Styling Modifications
 - Edit `wwwroot/css/site.css` for custom styles
@@ -186,3 +186,26 @@ For issues, questions, or contributions, please open an issue in the project rep
 ---
 
 **Built with ❤️ using ASP.NET Core and Bootstrap** 
+
+## Localization & TempData Troubleshooting
+
+### Correct Usage of Localized Strings
+- When using `IStringLocalizer` to retrieve localized messages for use in `TempData` or `ModelState.AddModelError`, **always use the `.Value` property**:
+  ```csharp
+  TempData["SuccessMessage"] = _localizer["TaskCreated"].Value;
+  ModelState.AddModelError("", _localizer["ErrorUpdatingTask"].Value);
+  ```
+- **Do not** store the `LocalizedString` object directly in `TempData` or `ModelState`, as this will cause serialization errors at runtime.
+
+### Common Error
+If you see an error like:
+```
+The 'Microsoft.AspNetCore.Mvc.ViewFeatures.Infrastructure.DefaultTempDataSerializer' cannot serialize an object of type 'Microsoft.Extensions.Localization.LocalizedString'.
+```
+This means you are storing a `LocalizedString` object instead of its `.Value` property. Update your code to use `.Value` as shown above.
+
+### Adding New Languages
+1. Create a new `.resx` file in the `Resources` folder
+2. Name it `SharedResource.{culture}.resx` (e.g., `SharedResource.fr.resx` for French)
+3. Add the culture to the supported cultures in `Program.cs`
+4. Add all required keys and translations 
