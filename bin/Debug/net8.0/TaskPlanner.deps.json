@@ -1,0 +1,31 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TaskPlanner/1.0.0": {
+        "runtime": {
+          "TaskPlanner.dll": {}
+        },
+        "resources": {
+          "en/TaskPlanner.resources.dll": {
+            "locale": "en"
+          },
+          "uk/TaskPlanner.resources.dll": {
+            "locale": "uk"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TaskPlanner/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
