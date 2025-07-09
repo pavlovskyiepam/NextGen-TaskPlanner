@@ -1,5 +1,10 @@
 # Task Planner
 
+## Screenshots
+
+![Task Planner Main Screen](docs/screenshot.png)
+*Main dashboard view with tasks in various states*
+
 A modern, responsive task management application built with ASP.NET Core and Razor Pages. This application allows users to create, edit, delete, and track the completion status of tasks with a beautiful Bootstrap-based UI.
 
 ## Features

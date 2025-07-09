@@ -1,18 +1,66 @@
 [
   {
+    "Id": 7,
+    "Title": "Translate UI Texts",
+    "Description": "\tAdd missing French and German translations.",
+    "DueDate": "2025-01-14T00:00:00",
+    "IsCompleted": false,
+    "CreatedAt": "2025-07-09T17:48:57.7269788+03:00"
+  },
+  {
+    "Id": 2,
+    "Title": "Design Landing Page",
+    "Description": "Create the first version of the product landing page with responsive layout.",
+    "DueDate": "2025-07-07T00:00:00",
+    "IsCompleted": false,
+    "CreatedAt": "2025-07-09T17:42:01.4244705+03:00"
+  },
+  {
     "Id": 1,
-    "Title": "First Task",
-    "Description": "1238",
+    "Title": "Fix Login Bug",
+    "Description": "Resolve 500 error when logging in with social accounts.",
     "DueDate": "2025-07-10T00:00:00",
     "IsCompleted": true,
     "CreatedAt": "2025-07-09T03:46:40.744824+03:00"
   },
   {
-    "Id": 2,
-    "Title": "Second Task",
-    "Description": "234234234",
-    "DueDate": "2025-07-07T00:00:00",
+    "Id": 3,
+    "Title": "Write Unit Tests",
+    "Description": "Add unit tests for the payment module functions.",
+    "DueDate": "2025-07-10T00:00:00",
     "IsCompleted": false,
-    "CreatedAt": "2025-07-09T17:42:01.4244705+03:00"
+    "CreatedAt": "2025-07-09T17:48:13.4610771+03:00"
+  },
+  {
+    "Id": 4,
+    "Title": "Prepare Sprint Review",
+    "Description": "Collect demo materials and prepare slides for the sprint meeting.",
+    "DueDate": "2025-07-10T00:00:00",
+    "IsCompleted": true,
+    "CreatedAt": "2025-07-09T17:48:24.7274141+03:00"
+  },
+  {
+    "Id": 6,
+    "Title": "Optimize DB Queries",
+    "Description": "Refactor slow SQL queries affecting dashboard load time.",
+    "DueDate": "2025-07-10T00:00:00",
+    "IsCompleted": false,
+    "CreatedAt": "2025-07-09T17:48:46.4086084+03:00"
+  },
+  {
+    "Id": 8,
+    "Title": "Review PR #42",
+    "Description": "Review PR #42Code review for the newly added notification system.",
+    "DueDate": "2025-07-17T00:00:00",
+    "IsCompleted": false,
+    "CreatedAt": "2025-07-09T17:49:16.7419336+03:00"
+  },
+  {
+    "Id": 5,
+    "Title": "Update User Roles",
+    "Description": "Implement role-based access for admin and editor views.",
+    "DueDate": "2025-10-16T00:00:00",
+    "IsCompleted": false,
+    "CreatedAt": "2025-07-09T17:48:35.7022959+03:00"
   }
 ]
